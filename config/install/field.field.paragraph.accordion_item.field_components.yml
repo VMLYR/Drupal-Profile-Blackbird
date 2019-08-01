@@ -1,0 +1,85 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_components
+    - paragraphs.paragraphs_type.accordion
+    - paragraphs.paragraphs_type.accordion_item
+    - paragraphs.paragraphs_type.content
+    - paragraphs.paragraphs_type.embed_block
+    - paragraphs.paragraphs_type.embed_iframe
+    - paragraphs.paragraphs_type.embed_view
+    - paragraphs.paragraphs_type.pod
+    - paragraphs.paragraphs_type.section
+    - paragraphs.paragraphs_type.slider
+    - paragraphs.paragraphs_type.tabs
+  module:
+    - entity_reference_revisions
+id: paragraph.accordion_item.field_components
+field_name: field_components
+entity_type: paragraph
+bundle: accordion_item
+label: Components
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      accordion: accordion
+      content: content
+      embed_block: embed_block
+      embed_iframe: embed_iframe
+      embed_view: embed_view
+      pod: pod
+      section: section
+      slider: slider
+      tabs: tabs
+    target_bundles_drag_drop:
+      accordion_item:
+        weight: 15
+        enabled: false
+      accordion:
+        enabled: true
+        weight: 16
+      content:
+        enabled: true
+        weight: 17
+      embed_block:
+        enabled: true
+        weight: 18
+      embed_iframe:
+        enabled: true
+        weight: 19
+      embed_view:
+        enabled: true
+        weight: 20
+      pod:
+        enabled: true
+        weight: 21
+      pod_pea_content:
+        weight: 22
+        enabled: false
+      section:
+        enabled: true
+        weight: 23
+      slider:
+        enabled: true
+        weight: 24
+      slider_slide_photo:
+        weight: 25
+        enabled: false
+      slider_slide_video:
+        weight: 26
+        enabled: false
+      tabs:
+        enabled: true
+        weight: 27
+      tabs_tab:
+        weight: 28
+        enabled: false
+field_type: entity_reference_revisions

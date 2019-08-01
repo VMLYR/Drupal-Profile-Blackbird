@@ -1,0 +1,46 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.full
+    - field.field.paragraph.pod.field_class_custom
+    - field.field.paragraph.pod.field_components
+    - field.field.paragraph.pod.field_content
+    - field.field.paragraph.pod.field_style
+    - field.field.paragraph.pod.field_title
+    - paragraphs.paragraphs_type.pod
+  module:
+    - entity_reference_revisions
+    - text
+id: paragraph.pod.full
+targetEntityType: paragraph
+bundle: pod
+mode: full
+content:
+  field_components:
+    type: entity_reference_revisions_entity_view
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      view_mode: full
+      link: ''
+    third_party_settings: {  }
+  field_content:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  field_class_custom: true
+  field_style: true

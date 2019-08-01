@@ -1,0 +1,47 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.slider_slide_photo.field_content
+    - field.field.paragraph.slider_slide_photo.field_image
+    - field.field.paragraph.slider_slide_photo.field_title
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.slider_slide_photo
+  module:
+    - focal_point
+    - text
+id: paragraph.slider_slide_photo.default
+targetEntityType: paragraph
+bundle: slider_slide_photo
+mode: default
+content:
+  field_content:
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_image:
+    weight: 0
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+      preview_link: true
+      offsets: '50,50'
+    third_party_settings: {  }
+    type: image_focal_point
+    region: content
+  field_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

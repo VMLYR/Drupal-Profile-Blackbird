@@ -1,0 +1,6 @@
+langcode: en
+status: true
+dependencies: {  }
+id: pod__example
+label: Example
+classes: component-pod--example-class

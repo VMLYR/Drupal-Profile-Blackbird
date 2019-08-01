@@ -1,0 +1,73 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.slider.field_class_custom
+    - field.field.paragraph.slider.field_components
+    - field.field.paragraph.slider.field_style
+    - paragraphs.paragraphs_type.slider
+  module:
+    - field_group
+    - paragraphs
+third_party_settings:
+  field_group:
+    group_settings:
+      children:
+        - status
+        - field_style
+        - field_class_custom
+      parent_name: ''
+      weight: 0
+      format_type: settings
+      format_settings:
+        id: ''
+        classes: ''
+      label: Settings
+      region: content
+id: paragraph.slider.default
+targetEntityType: paragraph
+bundle: slider
+mode: default
+content:
+  field_class_custom:
+    weight: 7
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_components:
+    type: paragraphs
+    weight: 1
+    settings:
+      title: Slide
+      title_plural: Slides
+      edit_mode: closed
+      closed_mode: preview
+      autocollapse: none
+      add_mode: button
+      form_display_mode: default
+      default_paragraph_type: slider_slide_photo
+      features:
+        collapse_edit_all: collapse_edit_all
+        duplicate: '0'
+        add_above: '0'
+    third_party_settings: {  }
+    region: content
+  field_style:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  status:
+    type: boolean_checkbox
+    weight: 5
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+hidden:
+  created: true
+  uid: true

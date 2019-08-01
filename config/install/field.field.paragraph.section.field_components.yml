@@ -1,0 +1,76 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_components
+    - paragraphs.paragraphs_type.content
+    - paragraphs.paragraphs_type.embed_block
+    - paragraphs.paragraphs_type.embed_iframe
+    - paragraphs.paragraphs_type.embed_view
+    - paragraphs.paragraphs_type.pod
+    - paragraphs.paragraphs_type.section
+    - paragraphs.paragraphs_type.slider
+    - paragraphs.paragraphs_type.tabs
+  module:
+    - entity_reference_revisions
+id: paragraph.section.field_components
+field_name: field_components
+entity_type: paragraph
+bundle: section
+label: Components
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      content: content
+      embed_block: embed_block
+      embed_iframe: embed_iframe
+      embed_view: embed_view
+      pod: pod
+      section: section
+      slider: slider
+      tabs: tabs
+    target_bundles_drag_drop:
+      content:
+        enabled: true
+        weight: -25
+      embed_block:
+        enabled: true
+        weight: -24
+      embed_iframe:
+        enabled: true
+        weight: -23
+      embed_view:
+        enabled: true
+        weight: -22
+      pod:
+        enabled: true
+        weight: -21
+      pod_pea_content:
+        weight: -20
+        enabled: false
+      section:
+        enabled: true
+        weight: -19
+      slider:
+        enabled: true
+        weight: -18
+      slider_slide_photo:
+        weight: -17
+        enabled: false
+      slider_slide_video:
+        weight: -16
+        enabled: false
+      tabs:
+        enabled: true
+        weight: -15
+      tabs_tab:
+        weight: -14
+        enabled: false
+field_type: entity_reference_revisions

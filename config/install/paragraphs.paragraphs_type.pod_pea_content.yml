@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: pod_pea_content
+label: 'Pod: Content Pea'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }
