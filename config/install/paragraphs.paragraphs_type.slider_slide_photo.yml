@@ -1,8 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-id: slider_slide_photo
-label: 'Slide: Photo'
-icon_uuid: null
-description: ''
-behavior_plugins: {  }

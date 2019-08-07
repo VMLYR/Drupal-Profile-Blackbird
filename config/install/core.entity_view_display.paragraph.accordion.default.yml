@@ -4,6 +4,7 @@ dependencies:
   config:
     - field.field.paragraph.accordion.field_class_custom
     - field.field.paragraph.accordion.field_components
+    - field.field.paragraph.accordion.field_html_anchor
     - field.field.paragraph.accordion.field_style
     - field.field.paragraph.accordion.field_title
     - paragraphs.paragraphs_type.accordion
@@ -30,6 +31,14 @@ content:
       link: ''
     third_party_settings: {  }
     type: entity_reference_revisions_entity_view
+    region: content
+  field_html_anchor:
+    weight: 4
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
     region: content
   field_style:
     weight: 2

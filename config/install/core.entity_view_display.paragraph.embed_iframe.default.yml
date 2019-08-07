@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.embed_iframe.field_class_custom
+    - field.field.paragraph.embed_iframe.field_html_anchor
     - field.field.paragraph.embed_iframe.field_link
     - field.field.paragraph.embed_iframe.field_style
     - field.field.paragraph.embed_iframe.field_style_height
@@ -17,6 +18,14 @@ mode: default
 content:
   field_class_custom:
     weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_html_anchor:
+    weight: 5
     label: above
     settings:
       link_to_entity: false

@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.embed_iframe.field_class_custom
+    - field.field.paragraph.embed_iframe.field_html_anchor
     - field.field.paragraph.embed_iframe.field_link
     - field.field.paragraph.embed_iframe.field_style
     - field.field.paragraph.embed_iframe.field_style_height
@@ -18,6 +19,7 @@ third_party_settings:
         - status
         - field_style
         - field_class_custom
+        - field_html_anchor
         - field_style_height
         - field_style_width
       parent_name: ''
@@ -41,6 +43,14 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
+  field_html_anchor:
+    weight: 8
+    settings:
+      size: 60
+      placeholder: 'Example: find-out-more'
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_link:
     weight: 3
     settings:
@@ -56,7 +66,7 @@ content:
     type: options_select
     region: content
   field_style_height:
-    weight: 8
+    weight: 9
     settings:
       size: 60
       placeholder: ''
@@ -64,7 +74,7 @@ content:
     type: string_textfield
     region: content
   field_style_width:
-    weight: 9
+    weight: 10
     settings:
       size: 60
       placeholder: ''

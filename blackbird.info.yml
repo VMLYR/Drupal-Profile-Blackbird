@@ -105,6 +105,7 @@ dependencies:
   - focal_point
   - google_tag
   - image
+  - limited_field_widgets
   - link
   - media
   - media_library
@@ -112,6 +113,7 @@ dependencies:
   - metatag_mobile
   - node
   - paragraphs
+  - paragraphs_component_field
   - responsive_image
   - smart_trim
   - telephone_formatter

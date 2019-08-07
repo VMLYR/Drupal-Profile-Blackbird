@@ -4,6 +4,7 @@ dependencies:
   config:
     - field.field.paragraph.embed_block.field_class_custom
     - field.field.paragraph.embed_block.field_embed_block
+    - field.field.paragraph.embed_block.field_html_anchor
     - field.field.paragraph.embed_block.field_style
     - paragraphs.paragraphs_type.embed_block
   module:
@@ -27,6 +28,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: block_field
+    region: content
+  field_html_anchor:
+    weight: 3
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
     region: content
   field_style:
     weight: 0

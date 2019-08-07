@@ -10,13 +10,11 @@ dependencies:
     - paragraphs.paragraphs_type.embed_iframe
     - paragraphs.paragraphs_type.embed_view
     - paragraphs.paragraphs_type.featured_content
+    - paragraphs.paragraphs_type.featured_links
     - paragraphs.paragraphs_type.featured_media
     - paragraphs.paragraphs_type.hero
-    - paragraphs.paragraphs_type.list_links
-    - paragraphs.paragraphs_type.pod
     - paragraphs.paragraphs_type.pullquote
     - paragraphs.paragraphs_type.section
-    - paragraphs.paragraphs_type.slider
     - paragraphs.paragraphs_type.tabs
   module:
     - entity_reference_revisions
@@ -43,11 +41,9 @@ settings:
       featured_content: featured_content
       featured_media: featured_media
       hero: hero
-      list_links: list_links
-      pod: pod
+      featured_links: featured_links
       pullquote: pullquote
       section: section
-      slider: slider
       tabs: tabs
     target_bundles_drag_drop:
       content:
@@ -80,7 +76,7 @@ settings:
       hero_slide:
         weight: -32
         enabled: false
-      list_links:
+      featured_links:
         enabled: true
         weight: -31
       pod:

@@ -4,6 +4,7 @@ dependencies:
   config:
     - field.field.paragraph.section.field_class_custom
     - field.field.paragraph.section.field_components
+    - field.field.paragraph.section.field_html_anchor
     - field.field.paragraph.section.field_image_background
     - field.field.paragraph.section.field_style
     - image.style.thumbnail
@@ -19,6 +20,7 @@ third_party_settings:
         - status
         - field_style
         - field_class_custom
+        - field_html_anchor
         - field_image_background
       parent_name: ''
       weight: 0
@@ -56,11 +58,20 @@ content:
         duplicate: duplicate
         collapse_edit_all: collapse_edit_all
         add_above: '0'
+      closed_mode_threshold: 0
     third_party_settings: {  }
     type: paragraphs
     region: content
-  field_image_background:
+  field_html_anchor:
     weight: 9
+    settings:
+      size: 60
+      placeholder: 'Example: find-out-more'
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_image_background:
+    weight: 10
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail

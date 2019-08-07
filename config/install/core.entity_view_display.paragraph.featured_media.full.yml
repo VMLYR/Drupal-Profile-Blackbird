@@ -24,5 +24,6 @@ content:
     region: content
 hidden:
   field_class_custom: true
+  field_html_anchor: true
   field_layout: true
   field_style: true

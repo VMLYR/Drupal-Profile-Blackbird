@@ -5,6 +5,7 @@ dependencies:
     - core.entity_view_mode.paragraph.preview
     - field.field.paragraph.embed_block.field_class_custom
     - field.field.paragraph.embed_block.field_embed_block
+    - field.field.paragraph.embed_block.field_html_anchor
     - field.field.paragraph.embed_block.field_style
     - paragraphs.paragraphs_type.embed_block
   module:
@@ -15,6 +16,7 @@ third_party_settings:
       children:
         - field_style
         - field_class_custom
+        - field_html_anchor
       parent_name: ''
       weight: 1
       format_type: details
@@ -44,6 +46,14 @@ content:
   field_class_custom:
     type: string
     weight: 2
+    region: content
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_html_anchor:
+    type: string
+    weight: 3
     region: content
     label: inline
     settings:

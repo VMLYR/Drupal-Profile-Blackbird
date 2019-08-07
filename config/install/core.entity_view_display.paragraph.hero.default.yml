@@ -4,6 +4,7 @@ dependencies:
   config:
     - field.field.paragraph.hero.field_class_custom
     - field.field.paragraph.hero.field_components
+    - field.field.paragraph.hero.field_html_anchor
     - field.field.paragraph.hero.field_style
     - paragraphs.paragraphs_type.hero
   module:
@@ -29,6 +30,14 @@ content:
       link: ''
     third_party_settings: {  }
     type: entity_reference_revisions_entity_view
+    region: content
+  field_html_anchor:
+    weight: 3
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
     region: content
   field_style:
     weight: 2

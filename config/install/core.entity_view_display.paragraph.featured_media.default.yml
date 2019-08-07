@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.featured_media.field_class_custom
+    - field.field.paragraph.featured_media.field_html_anchor
     - field.field.paragraph.featured_media.field_layout
     - field.field.paragraph.featured_media.field_media_items
     - field.field.paragraph.featured_media.field_style
@@ -14,6 +15,14 @@ mode: default
 content:
   field_class_custom:
     weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_html_anchor:
+    weight: 4
     label: above
     settings:
       link_to_entity: false

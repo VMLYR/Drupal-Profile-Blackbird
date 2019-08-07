@@ -4,6 +4,7 @@ dependencies:
   config:
     - field.field.paragraph.tabs.field_class_custom
     - field.field.paragraph.tabs.field_components
+    - field.field.paragraph.tabs.field_html_anchor
     - field.field.paragraph.tabs.field_style
     - field.field.paragraph.tabs.field_title
     - paragraphs.paragraphs_type.tabs
@@ -30,6 +31,14 @@ content:
       link: ''
     third_party_settings: {  }
     type: entity_reference_revisions_entity_view
+    region: content
+  field_html_anchor:
+    weight: 6
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
     region: content
   field_style:
     weight: 3

@@ -4,13 +4,11 @@ dependencies:
   config:
     - core.entity_view_mode.paragraph.full
     - field.field.paragraph.accordion_item.field_components
-    - field.field.paragraph.accordion_item.field_content
     - field.field.paragraph.accordion_item.field_enabled
     - field.field.paragraph.accordion_item.field_title
     - paragraphs.paragraphs_type.accordion_item
   module:
     - entity_reference_revisions
-    - text
 id: paragraph.accordion_item.full
 targetEntityType: paragraph
 bundle: accordion_item
@@ -25,13 +23,6 @@ content:
       view_mode: full
       link: ''
     third_party_settings: {  }
-  field_content:
-    weight: 1
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: text_default
-    region: content
   field_title:
     weight: 0
     label: hidden

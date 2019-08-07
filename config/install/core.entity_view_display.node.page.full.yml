@@ -5,6 +5,8 @@ dependencies:
     - core.entity_view_mode.node.full
     - field.field.node.page.body
     - field.field.node.page.field_components
+    - field.field.node.page.field_media
+    - field.field.node.page.field_meta_tags
     - node.type.page
   module:
     - entity_reference_revisions
@@ -31,9 +33,7 @@ content:
       link: ''
     third_party_settings: {  }
     region: content
-  links:
-    weight: 2
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_media: true
+  field_meta_tags: true
+  links: true

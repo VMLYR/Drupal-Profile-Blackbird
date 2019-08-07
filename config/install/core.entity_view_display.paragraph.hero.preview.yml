@@ -5,6 +5,7 @@ dependencies:
     - core.entity_view_mode.paragraph.preview
     - field.field.paragraph.hero.field_class_custom
     - field.field.paragraph.hero.field_components
+    - field.field.paragraph.hero.field_html_anchor
     - field.field.paragraph.hero.field_style
     - paragraphs.paragraphs_type.hero
   module:
@@ -27,6 +28,7 @@ third_party_settings:
       children:
         - field_style
         - field_class_custom
+        - field_html_anchor
       parent_name: ''
       weight: 1
       format_type: details
@@ -56,6 +58,14 @@ content:
     third_party_settings: {  }
     type: paragraph_summary
     region: content
+  field_html_anchor:
+    type: string
+    weight: 5
+    region: content
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
   field_style:
     weight: 3
     label: inline
