@@ -2,6 +2,7 @@ admin_css: true
 responsive_image: true
 one_pixel: true
 blazy:
-  loadInvisible: true
+  loadInvisible: false
   offset: 100
   saveViewportOffsetDelay: 50
+  validateDelay: null
