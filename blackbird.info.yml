@@ -2,7 +2,6 @@ name: Blackbird
 type: profile
 description: 'An opinionated Drupal profile with helpful components to take care of repeated tasks for new websites.'
 version: VERSION
-core: 8.x
 core_version_requirement: ^8 || ^9
 'base profile': blackbird
 dependencies:
@@ -13,8 +12,10 @@ dependencies:
   - advagg
   - advagg_css_minify
   - advagg_js_minify
+  - allowed_formats
   - automated_cron
   - better_exposed_filters
+  - bg_image_formatter
   - big_pipe
   - blazy
   - blazy_ui
@@ -24,6 +25,7 @@ dependencies:
   - block_field
   - breakpoint
   - ckeditor
+  - classy_paragraphs
   - color
   - config
   - config_export_ignore
@@ -43,21 +45,27 @@ dependencies:
   - environment_indicator_ui
   - field
   - field_group
+  - field_group_settings
   - field_ui
   - file
   - filter
   - focal_point
+  - google_tag
   - help
   - history
   - image
   - imageapi_optimize
   - imageapi_optimize_resmushit
   - inline_form_errors
+  - limited_field_widgets
   - link
   - link_class
   - linkit
   - login_emailusername
   - mailsystem
+  - media
+  - media_library
+  - media_responsive_thumbnail  
   - menu_link_attributes
   - menu_link_content
   - menu_ui
@@ -65,6 +73,7 @@ dependencies:
   - metatag_facebook
   - metatag_favicons
   - metatag_hreflang
+  - metatag_mobile  
   - metatag_open_graph
   - metatag_twitter_cards
   - metatag_verification
@@ -73,6 +82,8 @@ dependencies:
   - page_cache
   - path
   - pathauto
+  - paragraphs
+  - paragraphs_component_field
   - permissions_filter
   - rdf
   - redirect
@@ -86,42 +97,15 @@ dependencies:
   - system
   - taxonomy
   - telephone
+  - telephone_formatter
+  - telephone_validation  
   - text
   - theme_filter
   - token
   - toolbar
   - user
   - video_embed_field
-  - views
-  - viewsreference
-
-  - allowed_formats
-  - bg_image_formatter
-  - block_field
-  - classy_paragraphs
-  - entity_reference_revisions
-  - field_group
-  - field_group_settings
-  - file
-  - focal_point
-  - google_tag
-  - image
-  - limited_field_widgets
-  - link
-  - media
-  - media_library
-  - media_responsive_thumbnail
-  - metatag_mobile
-  - node
-  - paragraphs
-  - paragraphs_component_field
-  - responsive_image
-  - smart_trim
-  - telephone_formatter
-  - telephone_validation
-  - text
-  - video_embed_field
-  - video_embed_media
+  - video_embed_media  
   - views
   - viewsreference
 themes:

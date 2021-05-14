@@ -12,6 +12,7 @@ use Drupal\Core\Config\StorageInterface;
 use Drupal\config_filter\Config\FilteredStorage;
 use Drupal\user\Entity\User;
 use Drupal\user\RoleInterface;
+use Drupal\user\UserInterface;
 use Drupal\shortcut\Entity\Shortcut;
 use Symfony\Component\Filesystem\Filesystem;
 use Webmozart\PathUtil\Path;
@@ -29,7 +30,7 @@ function blackbird_install() {
 
   // Allow visitor account creation with administrative approval.
   $user_settings = \Drupal::configFactory()->getEditable('user.settings');
-  $user_settings->set('register', USER_REGISTER_VISITORS_ADMINISTRATIVE_APPROVAL)->save(TRUE);
+  $user_settings->set('register', UserInterface::REGISTER_VISITORS_ADMINISTRATIVE_APPROVAL)->save(TRUE);
 
   // Assign user 1 the "administrator" role.
   $user = User::load(1);
