@@ -10,6 +10,7 @@ use Drupal\Core\Config\FileStorage;
 use Drupal\Core\Config\StorageComparer;
 use Drupal\Core\Config\StorageInterface;
 use Drupal\config_filter\Config\FilteredStorage;
+use Drupal\Core\Site\Settings;
 use Drupal\user\Entity\User;
 use Drupal\user\RoleInterface;
 use Drupal\user\UserInterface;
@@ -111,7 +112,7 @@ function blackbird_install_tasks_clean() {
  * Updates config split directories to be relevant to a sites sync directory.
  */
 function _blackbird_install_tasks_clean_config_split_paths(&$context) {
-  $path_sync = config_get_config_directory(CONFIG_SYNC_DIRECTORY);
+  $path_sync = Settings::get('config_sync_directory');
 
   // Update existing split folder config to match this site's sync directory.
   foreach (\Drupal::entityTypeManager()->getStorage('config_split')->loadMultiple() as $config_split) {
@@ -139,7 +140,7 @@ function _blackbird_install_tasks_clean_config_split_duplication(&$context) {
   // Get directory paths.
   $path_profile = drupal_get_path('profile', 'blackbird');
   $path_profile_config_splits = $path_profile . '/config/splits';
-  $path_sync = config_get_config_directory(CONFIG_SYNC_DIRECTORY);
+  $path_sync = Settings::get('config_sync_directory');
 
   $directory_profile_config_splits = new DirectoryIterator($path_profile_config_splits);
   foreach ($directory_profile_config_splits as $fileinfo) {
@@ -180,7 +181,7 @@ function _blackbird_install_tasks_clean_updates(&$context) {
   $filesystem = new Filesystem();
 
   // Get directory paths.
-  $path_sync = config_get_config_directory(CONFIG_SYNC_DIRECTORY);
+  $path_sync = Settings::get('config_sync_directory');
 
   // Load all environment indicators.
   $environment_indicators = \Drupal::entityTypeManager()->getStorage('environment_indicator')->loadMultiple();
@@ -243,7 +244,7 @@ function blackbird_install_tasks_config_split() {
   // Get directory paths.
   $path_profile = drupal_get_path('profile', 'blackbird');
   $path_profile_config_splits = $path_profile . '/config/splits';
-  $path_sync = config_get_config_directory(CONFIG_SYNC_DIRECTORY);
+  $path_sync = Settings::get('config_sync_directory');
 
   // Update existing split folder config to match this site's sync directory.
   foreach (\Drupal::entityTypeManager()->getStorage('config_split')->loadMultiple() as $config_split) {
@@ -293,7 +294,7 @@ function _blackbird_install_tasks_config_split($split_name, &$context) {
   // Get directory paths.
   $path_profile = drupal_get_path('profile', 'blackbird');
   $path_profile_config_splits = $path_profile . '/config/splits';
-  $path_sync = config_get_config_directory(CONFIG_SYNC_DIRECTORY);
+  $path_sync = Settings::get('config_sync_directory');
 
   // Config split paths.
   $path_profile_config_split = Path::canonicalize($path_profile_config_splits . '/' . $split_name);
@@ -340,7 +341,7 @@ function _blackbird_install_tasks_config_split($split_name, &$context) {
  */
 function blackbird_install_tasks_config_export() {
   // Get directory path.
-  $path_sync = Path::canonicalize(config_get_config_directory(CONFIG_SYNC_DIRECTORY));
+  $path_sync = Path::canonicalize(Settings::get('config_sync_directory'));
 
   // Load storage instances.
   /** @var \Drupal\Core\Config\StorageInterface $source_storage */
@@ -419,7 +420,8 @@ function blackbird_install_tasks_config_import() {
       \Drupal::service('module_handler'),
       \Drupal::service('module_installer'),
       \Drupal::service('theme_handler'),
-      \Drupal::service('string_translation')
+      \Drupal::service('string_translation'),
+      \Drupal::service('extension.list.module')
     );
 
     foreach ($config_importer->initialize() as $sync_step) {
