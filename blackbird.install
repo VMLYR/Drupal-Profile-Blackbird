@@ -424,6 +424,7 @@ function blackbird_install_tasks_config_import() {
       ->setInitMessage(t('Starting configuration import.'))
       ->setProgressMessage(t('Completed step @current of @total.'))
       ->setErrorMessage(t('Configuration import has encountered an error.'));
+
     foreach ($sync_steps as $sync_step) {
       $batch_builder->addOperation([ConfigImporterBatch::class, 'process'], [$config_importer, $sync_step]);
     }
