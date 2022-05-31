@@ -5,7 +5,9 @@
  * Install, update and uninstall functions for the Blackbird install profile.
  */
 
+use Drupal\Core\Batch\BatchBuilder;
 use Drupal\Core\Config\ConfigImporter;
+use Drupal\Core\Config\Importer\ConfigImporterBatch;
 use Drupal\Core\Config\FileStorage;
 use Drupal\Core\Config\StorageComparer;
 use Drupal\Core\Config\StorageInterface;
@@ -399,16 +401,6 @@ function blackbird_install_tasks_config_import() {
   $storage_filtered = new FilteredStorage($storage_active, [$filter]);
   $storage_comparer = new StorageComparer($storage_filtered, $storage_active, $config_manager);
 
-  // Create batch definition.
-  $batch = [
-    'operations' => [],
-    'finished' => [\Drupal\config\Form\ConfigSync::class, 'finishBatch'],
-    'title' => t('Importing local configuration'),
-    'init_message' => t('Starting configuration import.'),
-    'progress_message' => t('Completed step @current of @total.'),
-    'error_message' => t('Configuration import has encountered an error.'),
-  ];
-
   // Add items to batch.
   if ($storage_comparer->createChangelist()->hasChanges()) {
     $config_importer = new ConfigImporter(
@@ -424,10 +416,19 @@ function blackbird_install_tasks_config_import() {
       \Drupal::service('extension.list.module')
     );
 
-    foreach ($config_importer->initialize() as $sync_step) {
-      $batch['operations'][] = [[\Drupal\config\Form\ConfigSync::class, 'processBatch'], [$config_importer, $sync_step]];
-    }
-  }
 
-  return $batch;
+    $sync_steps = $config_importer->initialize();
+    $batch_builder = (new BatchBuilder())
+      ->setTitle(t('Importing Local Configuration'))
+      ->setFinishCallback([ConfigImporterBatch::class, 'finish'])
+      ->setInitMessage(t('Starting configuration import.'))
+      ->setProgressMessage(t('Completed step @current of @total.'))
+      ->setErrorMessage(t('Configuration import has encountered an error.'));
+
+    foreach ($sync_steps as $sync_step) {
+      $batch_builder->addOperation([ConfigImporterBatch::class, 'process'], [$config_importer, $sync_step]);
+    }
+
+    batch_set($batch_builder->toArray());
+  }
 }
