@@ -5,6 +5,7 @@ dependencies:
     - core.entity_view_mode.paragraph.full
     - field.field.paragraph.embed_view.field_class_custom
     - field.field.paragraph.embed_view.field_embed_view
+    - field.field.paragraph.embed_view.field_html_anchor
     - field.field.paragraph.embed_view.field_style
     - paragraphs.paragraphs_type.embed_view
   module:
@@ -28,4 +29,5 @@ content:
     third_party_settings: {  }
 hidden:
   field_class_custom: true
+  field_html_anchor: true
   field_style: true

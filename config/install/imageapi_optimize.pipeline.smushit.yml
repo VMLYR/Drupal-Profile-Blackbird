@@ -1,6 +1,8 @@
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - imageapi_optimize_resmushit
 name: smushit
 label: Smushit
 processors:

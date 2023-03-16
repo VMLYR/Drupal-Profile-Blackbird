@@ -5,6 +5,7 @@ dependencies:
     - core.entity_view_mode.paragraph.full
     - field.field.paragraph.tabs.field_class_custom
     - field.field.paragraph.tabs.field_components
+    - field.field.paragraph.tabs.field_html_anchor
     - field.field.paragraph.tabs.field_style
     - field.field.paragraph.tabs.field_title
     - paragraphs.paragraphs_type.tabs
@@ -34,4 +35,5 @@ content:
     third_party_settings: {  }
 hidden:
   field_class_custom: true
+  field_html_anchor: true
   field_style: true

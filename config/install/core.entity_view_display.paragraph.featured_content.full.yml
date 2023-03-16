@@ -4,6 +4,7 @@ dependencies:
   config:
     - core.entity_view_mode.paragraph.full
     - field.field.paragraph.featured_content.field_class_custom
+    - field.field.paragraph.featured_content.field_html_anchor
     - field.field.paragraph.featured_content.field_layout
     - field.field.paragraph.featured_content.field_related_nodes
     - field.field.paragraph.featured_content.field_style
@@ -32,5 +33,6 @@ content:
     region: content
 hidden:
   field_class_custom: true
+  field_html_anchor: true
   field_layout: true
   field_style: true

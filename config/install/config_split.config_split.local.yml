@@ -3,6 +3,8 @@ status: true
 dependencies: {  }
 id: local
 label: Local
+description: ''
+weight: -5
 folder: ../config/www/local
 module:
   dblog: 0
@@ -18,4 +20,3 @@ graylist:
   - system.performance
 graylist_dependents: true
 graylist_skip_equal: false
-weight: -5

@@ -5,6 +5,7 @@ dependencies:
     - image.style.huge_1x1
     - image.style.large_1x1
     - image.style.medium_1x1
+    - image.style.small_1x1
 id: narrow
 label: Narrow
 image_style_mappings:

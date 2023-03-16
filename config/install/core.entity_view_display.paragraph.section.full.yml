@@ -5,6 +5,7 @@ dependencies:
     - core.entity_view_mode.paragraph.full
     - field.field.paragraph.section.field_class_custom
     - field.field.paragraph.section.field_components
+    - field.field.paragraph.section.field_html_anchor
     - field.field.paragraph.section.field_image_background
     - field.field.paragraph.section.field_style
     - image.style.large_1x1
@@ -49,4 +50,5 @@ content:
     third_party_settings: {  }
 hidden:
   field_class_custom: true
+  field_html_anchor: true
   field_style: true

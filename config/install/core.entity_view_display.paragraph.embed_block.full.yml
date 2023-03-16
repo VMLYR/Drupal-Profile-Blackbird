@@ -5,6 +5,7 @@ dependencies:
     - core.entity_view_mode.paragraph.full
     - field.field.paragraph.embed_block.field_class_custom
     - field.field.paragraph.embed_block.field_embed_block
+    - field.field.paragraph.embed_block.field_html_anchor
     - field.field.paragraph.embed_block.field_style
     - paragraphs.paragraphs_type.embed_block
   module:
@@ -23,4 +24,5 @@ content:
     region: content
 hidden:
   field_class_custom: true
+  field_html_anchor: true
   field_style: true

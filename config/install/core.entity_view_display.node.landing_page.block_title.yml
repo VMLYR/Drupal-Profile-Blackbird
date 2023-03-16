@@ -6,6 +6,8 @@ dependencies:
     - field.field.node.landing_page.body
     - field.field.node.landing_page.field_component_hero
     - field.field.node.landing_page.field_components
+    - field.field.node.landing_page.field_media
+    - field.field.node.landing_page.field_meta_tags
     - node.type.landing_page
   module:
     - entity_reference_revisions
@@ -27,4 +29,6 @@ content:
 hidden:
   body: true
   field_components: true
+  field_media: true
+  field_meta_tags: true
   links: true

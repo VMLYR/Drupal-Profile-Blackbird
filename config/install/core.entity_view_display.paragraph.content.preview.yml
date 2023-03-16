@@ -7,6 +7,8 @@ dependencies:
     - field.field.paragraph.content.field_content
     - field.field.paragraph.content.field_html_anchor
     - field.field.paragraph.content.field_link
+    - field.field.paragraph.content.field_media_item
+    - field.field.paragraph.content.field_media_layout
     - field.field.paragraph.content.field_style
     - field.field.paragraph.content.field_title
     - paragraphs.paragraphs_type.content
@@ -114,4 +116,6 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_media_item: true
+  field_media_layout: true

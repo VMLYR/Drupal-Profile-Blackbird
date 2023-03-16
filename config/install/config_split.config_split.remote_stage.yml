@@ -3,6 +3,8 @@ status: true
 dependencies: {  }
 id: remote_stage
 label: 'Remote - Stage'
+description: ''
+weight: 0
 folder: ../config/www/remote_stage
 module:
   dblog: 0
@@ -13,4 +15,3 @@ blacklist: {  }
 graylist: {  }
 graylist_dependents: true
 graylist_skip_equal: true
-weight: 0

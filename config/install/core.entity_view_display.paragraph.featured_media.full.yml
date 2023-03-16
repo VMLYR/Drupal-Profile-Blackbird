@@ -4,6 +4,7 @@ dependencies:
   config:
     - core.entity_view_mode.paragraph.full
     - field.field.paragraph.featured_media.field_class_custom
+    - field.field.paragraph.featured_media.field_html_anchor
     - field.field.paragraph.featured_media.field_layout
     - field.field.paragraph.featured_media.field_media_items
     - field.field.paragraph.featured_media.field_style

@@ -4,5 +4,6 @@ dependencies: {  }
 id: accordion
 label: 'Accordion Group'
 icon_uuid: null
+icon_default: null
 description: ''
 behavior_plugins: {  }

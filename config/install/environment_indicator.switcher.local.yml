@@ -4,6 +4,7 @@ dependencies: {  }
 machine: local
 description: null
 name: Local
-url: 'https://www.bazo.docksal'
+weight: null
+url: 'https://my-first-drupal10-app.lndo.site/'
 fg_color: '#e6e6e6'
 bg_color: '#0080ff'

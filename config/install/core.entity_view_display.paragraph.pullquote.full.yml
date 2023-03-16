@@ -6,6 +6,7 @@ dependencies:
     - field.field.paragraph.pullquote.field_attribution
     - field.field.paragraph.pullquote.field_class_custom
     - field.field.paragraph.pullquote.field_content
+    - field.field.paragraph.pullquote.field_html_anchor
     - field.field.paragraph.pullquote.field_style
     - paragraphs.paragraphs_type.pullquote
   module:
@@ -32,4 +33,5 @@ content:
     region: content
 hidden:
   field_class_custom: true
+  field_html_anchor: true
   field_style: true

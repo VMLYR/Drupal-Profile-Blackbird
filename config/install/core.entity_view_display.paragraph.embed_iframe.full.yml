@@ -4,6 +4,7 @@ dependencies:
   config:
     - core.entity_view_mode.paragraph.full
     - field.field.paragraph.embed_iframe.field_class_custom
+    - field.field.paragraph.embed_iframe.field_html_anchor
     - field.field.paragraph.embed_iframe.field_link
     - field.field.paragraph.embed_iframe.field_style
     - field.field.paragraph.embed_iframe.field_style_height
@@ -16,6 +17,7 @@ mode: full
 content: {  }
 hidden:
   field_class_custom: true
+  field_html_anchor: true
   field_link: true
   field_style: true
   field_style_height: true

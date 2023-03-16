@@ -4,6 +4,7 @@ dependencies: {  }
 machine: remote_stage
 description: null
 name: Stage
-url: 'https://stage-www.bazo.com'
+weight: null
+url: 'https://my-first-drupal10-app.lndo.site/'
 fg_color: '#e6e6e6'
 bg_color: '#008040'

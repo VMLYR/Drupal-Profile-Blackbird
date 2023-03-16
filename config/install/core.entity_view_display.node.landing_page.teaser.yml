@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.landing_page.field_components
     - field.field.node.landing_page.field_media
     - field.field.node.landing_page.field_meta_tags
+    - image.style.small_1x1
     - node.type.landing_page
   module:
     - blazy

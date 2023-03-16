@@ -11,6 +11,7 @@ dependencies:
     - field.field.paragraph.content.field_media_layout
     - field.field.paragraph.content.field_style
     - field.field.paragraph.content.field_title
+    - image.style.small
     - paragraphs.paragraphs_type.content
   module:
     - blazy
