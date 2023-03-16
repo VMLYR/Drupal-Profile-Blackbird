@@ -18,7 +18,7 @@ use Drupal\user\RoleInterface;
 use Drupal\user\UserInterface;
 use Drupal\shortcut\Entity\Shortcut;
 use Symfony\Component\Filesystem\Filesystem;
-use Webmozart\PathUtil\Path;
+use Symfony\Component\Filesystem\Path;
 
 /**
  * Implements hook_install().
@@ -140,7 +140,7 @@ function _blackbird_install_tasks_clean_config_split_duplication(&$context) {
   $filesystem = new Filesystem();
 
   // Get directory paths.
-  $path_profile = drupal_get_path('profile', 'blackbird');
+  $path_profile = Drupal::service('extension.list.profile')->getPath('blackbird');
   $path_profile_config_splits = $path_profile . '/config/splits';
   $path_sync = Settings::get('config_sync_directory');
 
@@ -244,7 +244,7 @@ function _blackbird_install_tasks_clean_updates(&$context) {
  */
 function blackbird_install_tasks_config_split() {
   // Get directory paths.
-  $path_profile = drupal_get_path('profile', 'blackbird');
+  $path_profile = Drupal::service('extension.list.profile')->getPath('blackbird');
   $path_profile_config_splits = $path_profile . '/config/splits';
   $path_sync = Settings::get('config_sync_directory');
 
@@ -294,7 +294,7 @@ function _blackbird_install_tasks_config_split($split_name, &$context) {
   }
 
   // Get directory paths.
-  $path_profile = drupal_get_path('profile', 'blackbird');
+  $path_profile = Drupal::service('extension.list.profile')->getPath('blackbird');
   $path_profile_config_splits = $path_profile . '/config/splits';
   $path_sync = Settings::get('config_sync_directory');
 
